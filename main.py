@@ -1,7 +1,10 @@
 import openai
 import telebot
+
 openai.api_key = "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"
 bot = telebot.TeleBot("5891025670:AAFzxpdsaUeJ_g367sYU8ghZv3MJxw0ZLoA")
+
+
 @bot.message_handler(func=lambda _: True)
 def handle_message(message):
     response = openai.Completion.create(
